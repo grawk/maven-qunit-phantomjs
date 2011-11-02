@@ -1,0 +1,10 @@
+QUnit Test Report
+
+http://dev.paypal.com/~medelman/qunit/mathtest.html
+Tests completed in 76 milliseconds.
+4 tests of 4 passed, 0 failed.
+*~*~*~*~*~
+http://dev.paypal.com/~medelman/qunit/test.html
+Tests completed in 27 milliseconds.
+17 tests of 18 passed, 1 failed.
+*~*~*~*~*~

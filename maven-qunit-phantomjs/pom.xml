@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.paypal</groupId>
+  <artifactId>qunit</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <id>PhantomJS Unit Testing</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                    </execution>
+                </executions>
+               <!-- <configuration>
+               	<executable>phantomjs</executable>
+                    <workingDirectory>test</workingDirectory>
+                    <classpathScope>system</classpathScope>
+                    <arguments>
+                        <argument>qunit-runner.js</argument>
+                        <argument>qunit-index.html</argument>
+                        <argument>${project.build.directory}/surefire-reports</argument>
+                    </arguments>
+                </configuration> -->
+                <configuration>
+                	<executable>${project.basedir}/test/phantomjscheck</executable>
+                	<classpathScope>system</classpathScope>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

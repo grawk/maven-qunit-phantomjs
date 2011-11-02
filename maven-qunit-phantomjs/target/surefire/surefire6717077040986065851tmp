@@ -1,0 +1,5 @@
+#surefire
+#Thu Oct 06 17:14:05 PDT 2011
+user.dir=/Users/medelman/dev/workspace/qunit
+localRepository=/Library/maven.repo
+basedir=/Users/medelman/dev/workspace/qunit
