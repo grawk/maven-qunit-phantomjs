@@ -18,8 +18,9 @@
                         </goals>
                     </execution>
                 </executions>
-               <!-- <configuration>
-               	<executable>phantomjs</executable>
+               <configuration>
+               	<executable>${project.basedir}/test/phantomjscheck</executable>
+               	<!-- <executable>phantomjs</executable> -->
                     <workingDirectory>test</workingDirectory>
                     <classpathScope>system</classpathScope>
                     <arguments>
@@ -27,11 +28,11 @@
                         <argument>qunit-index.html</argument>
                         <argument>${project.build.directory}/surefire-reports</argument>
                     </arguments>
-                </configuration> -->
-                <configuration>
+                </configuration>
+                <!-- <configuration>
                 	<executable>${project.basedir}/test/phantomjscheck</executable>
                 	<classpathScope>system</classpathScope>
-                </configuration>
+                </configuration> -->
             </plugin>
         </plugins>
     </build>
