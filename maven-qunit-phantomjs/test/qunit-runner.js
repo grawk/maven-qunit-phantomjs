@@ -42,12 +42,12 @@ function waitFor(testFx, onReady, timeOutMillis) {
 					if (!condition) {
 						// If condition still not fulfilled (timeout but
 						// condition is 'false')
-						console.log("'waitFor()' timeout");
+						//console.log("'waitFor()' timeout");
 						phantom.exit(1);
 					} else {
 						// Condition fulfilled (timeout and/or condition is
 						// 'true')
-						console.log("'waitFor()' finished in "
+						//console.log("'waitFor()' finished in "
 								+ (new Date().getTime() - start) + "ms.");
 						typeof (onReady) === "string" ? eval(onReady)
 								: onReady(); // < Do what it's supposed to do
@@ -102,18 +102,18 @@ function runTests() {
 	var currentTest = phantom.tests.shift();
 	if (currentTest === undefined) {
 		// console.log("full results:::"+phantom.results);
-		console.log("attempt to write to:" + outputDir + '/' + outputFile);
+		//console.log("attempt to write to:" + outputDir + '/' + outputFile);
 		var f = fs.open(outputDir + '/' + outputFile, "w");
 		f.write(results);
 		f.close();
 		phantom.exit((success) ? 0 : 1);
 	}
-	console.log("run test: " + currentTest);
+	//console.log("run test: " + currentTest);
 
 	// run test
 	page.open(currentTest, function(status) {
 		if (status !== "success") {
-			console.log("Unable to access network");
+			//console.log("Unable to access network");
 			phantom.exit(1);
 		} else {
 			waitFor(function() {
